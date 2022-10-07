@@ -6,7 +6,7 @@
 /*   By: hcremers <hcremers@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:17:11 by hcremers          #+#    #+#             */
-/*   Updated: 2022/10/06 15:00:21 by hcremers         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:09:21 by hcremers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main()
 	Span	a;
 	Span	b(20000);
 	
+	std::cout << std::endl;
 	try																			// Try to add number to empty class
 	{
 		a.addNumber(1);
@@ -37,15 +38,17 @@ int	main()
 		std::cout << e.what() << std::endl;
 	}
 
-	try																			// Add range of numbers to valid class
-	{
-		addRange(&b, -5000, 5000);
-	}
-	catch (const Span::SizeMaxReachedException& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
+	// std::cout << std::endl;
+	// try																			// Add range of numbers to valid class
+	// {
+	// 	addRange(&b, -5000, 5000);
+	// }
+	// catch (const Span::SizeMaxReachedException& e)
+	// {
+	// 	std::cout << e.what() << std::endl;
+	// }
 
+	std::cout << std::endl;
 	try																			// Add random numbers to valid class
 	{
 		b.addNumber(10);
@@ -64,6 +67,7 @@ int	main()
 		std::cout << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
 	try																			// Try member function on empty class
 	{
 		std::cout << a.longestSpan() << std::endl;
@@ -73,6 +77,7 @@ int	main()
 		std::cout << e.what() << std::endl;
 	}
 
+	std::cout << std::endl;
 	try																			// Try member functions on valid class
 	{
 		std::cout << b.longestSpan() << std::endl;
@@ -86,6 +91,7 @@ int	main()
 	Span	c;
 	c = b;
 
+	std::cout << std::endl;
 	try																			// Try member functions on copied class
 	{
 		std::cout << c.longestSpan() << std::endl;

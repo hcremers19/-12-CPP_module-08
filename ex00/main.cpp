@@ -6,7 +6,7 @@
 /*   By: hcremers <hcremers@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:43:41 by hcremers          #+#    #+#             */
-/*   Updated: 2022/10/05 17:40:34 by hcremers         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:07:56 by hcremers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int main()
 
 	std::cout << std::endl;
 
-	int								n = 5;
-	
 	try																			// Try to find n
 	{
-		std::cout << *easyfind(lst, n) << std::endl;
+		std::cout << *easyfind(lst, 6) << std::endl;
+		std::cout << *easyfind(lst, 5) << std::endl;
+		std::cout << *easyfind(lst, -10) << std::endl;
 	}
 	catch(const std::exception& e)
 	{
